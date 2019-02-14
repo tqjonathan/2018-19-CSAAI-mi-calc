@@ -1,7 +1,7 @@
 function main() {
   console.log("Comienza JS");
 
-  //Nueva variable para coger el nº 0 [id='Cero']
+  //Nuevas variables para los numeros
   var Cero = document.getElementById("Nº0");
   var Uno = document.getElementById("Nº1");
   var Dos = document.getElementById("Nº2");
@@ -15,7 +15,9 @@ function main() {
 
   var Display = document.getElementById('Display');
 
+  //Añadir numeros al Display
   Cero.onclick = () => {
+
   Display.innerHTML = Display.innerHTML + 0;
   }
 
@@ -23,5 +25,37 @@ function main() {
   Display.innerHTML = Display.innerHTML + 1;
   }
 
+  Dos.onclick = () => {
+  Display.innerHTML = Display.innerHTML + 2;
+  }
+
+  Tres.onclick = () => {
+  Display.innerHTML = Display.innerHTML + 3;
+  }
+
+  Cuatro.onclick = () => {
+  Display.innerHTML = Display.innerHTML + 4;
+  }
+
+  Cinco.onclick = () => {
+  Display.innerHTML = Display.innerHTML + 5;
+  }
+
+  Seis.onclick = () => {
+  Display.innerHTML = Display.innerHTML + 6;
+  }
+
+  Siete.onclick = () => {
+  Display.innerHTML = Display.innerHTML + 7;
+  }
+
+  Ocho.onclick = () => {
+  Display.innerHTML = Display.innerHTML + 8;
+  }
+
+  Nueve.onclick = () => {
+  Display.innerHTML = Display.innerHTML + 9;
+  }
+  //........
 
 }
