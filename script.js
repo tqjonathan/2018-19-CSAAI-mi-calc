@@ -2,6 +2,8 @@ function main() {
   console.log("Comienza JS");
 
   //Nuevas variables para los numeros
+
+  //colocarlas en un objeto GUI
   var Cero = document.getElementById("Nº0");
   var Uno = document.getElementById("Nº1");
   var Dos = document.getElementById("Nº2");
@@ -13,24 +15,31 @@ function main() {
   var Ocho = document.getElementById("Nº8");
   var Nueve = document.getElementById("Nº9");
 
-  var Display = document.getElementById('Display');
+  var Suma = document.getElementById("Suma");
+  var Resta = document.getElementById("Resta");
+  var Multiplicacion = document.getElementById('Multiplicacion');
+  var Division = document.getElementById("Division");
+  var Igual = document.getElementById("Igual");
+  var AC = document.getElementById("AC");
+
+  var Display = document.getElementById("Display");
 
   //Añadir numeros al Display
-  Cero.onclick = () => {
 
-  Display.innerHTML = Display.innerHTML + 0;
+  Cero.onclick = () => {
+    Display.innerHTML = Display.innerHTML + 0
   }
 
   Uno.onclick = () => {
-  Display.innerHTML = Display.innerHTML + 1;
+    Display.innerHTML = Display.innerHTML + 1
   }
 
   Dos.onclick = () => {
-  Display.innerHTML = Display.innerHTML + 2;
+    Display.innerHTML = Display.innerHTML + 2;
   }
 
   Tres.onclick = () => {
-  Display.innerHTML = Display.innerHTML + 3;
+    Display.innerHTML = Display.innerHTML + 3;
   }
 
   Cuatro.onclick = () => {
@@ -56,6 +65,63 @@ function main() {
   Nueve.onclick = () => {
   Display.innerHTML = Display.innerHTML + 9;
   }
-  //........
+
+  Suma.onclick = () => {
+    Valor1 = Display.innerHTML
+    Operacion = "+"
+    Display.innerHTML = ""
+  }
+
+  Multiplicacion.onclick = () => {
+    Valor1 = Display.innerHTML
+    Operacion = "x"
+    Display.innerHTML = ""
+  }
+
+  Resta.onclick = () => {
+    Valor1 = Display.innerHTML
+    Operacion = "-"
+    Display.innerHTML = ""
+  }
+
+  Division.onclick = () => {
+    Valor1 = Display.innerHTML
+    Operacion = "/"
+    Display.innerHTML = ""
+  }
+
+  AC.onclick = () => {
+    Valor1 = 0;
+    Valor2 = 0;
+    Display.innerHTML = ""
+    console.log("AC");
+  }
+
+  Igual.onclick = () => {
+    Valor2 = Display.innerHTML
+    console.log("calculando");
+    Resolver()
+  }
+
+  function Resolver () {
+    if (Operacion == "+") {
+      Solucion = parseFloat(Valor1) + parseFloat(Valor2)
+      console.log("sumando");
+      Display.innerHTML = Solucion
+    }else if (Operacion == "-") {
+      Solucion = parseFloat(Valor1) - parseFloat(Valor2)
+      console.log("restando");
+      Display.innerHTML = Solucion
+    }else if (Operacion == "x") {
+      Solucion = parseFloat(Valor1) * parseFloat(Valor2)
+      console.log("multiplicando");
+      Display.innerHTML = Solucion
+    }else if (Operacion == "/") {
+      Solucion = parseFloat(Valor1) / parseFloat(Valor2)
+      console.log("Dividiendo");
+      Display.innerHTML = Solucion.toFixed(4)
+    }
+  }
+
 
 }

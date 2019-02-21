@@ -1,5 +1,6 @@
 body{
   background-color: lightblue;
+  text-align: center;
 }
 
 #Display{
@@ -15,7 +16,6 @@ div{
   margin: 2px;
 }
 
-
 .Botones{
   width: 40px;
   height: 40px;
@@ -23,5 +23,9 @@ div{
 }
 
 #Igual{
+  width: 127px;
+}
+
+#AC{
   width: 127px;
 }
