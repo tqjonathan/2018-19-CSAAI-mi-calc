@@ -20,7 +20,7 @@ function main() {
   var Multiplicacion = document.getElementById('Multiplicacion');
   var Division = document.getElementById("Division");
   var Igual = document.getElementById("Igual");
-  var AC = document.getElementById("AC");
+  var Reset = document.getElementById("Reset");
 
   var Display = document.getElementById("Display");
 
@@ -90,11 +90,11 @@ function main() {
     Display.innerHTML = ""
   }
 
-  AC.onclick = () => {
+  Reset.onclick = () => {
     Valor1 = 0;
     Valor2 = 0;
     Display.innerHTML = ""
-    console.log("AC");
+    console.log("Reset");
   }
 
   Igual.onclick = () => {
